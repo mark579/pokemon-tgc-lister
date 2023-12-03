@@ -1,9 +1,9 @@
 {
-  "_hash": "YQ4LOvidVY",
+  "_hash": "pdoKckswdd",
   "project": {
     "rootDir": "/Users/mark/github/pokemon-tgc-lister"
   },
   "versions": {
-    "nuxt": "3.8.0"
+    "nuxt": "3.8.2"
   }
 }

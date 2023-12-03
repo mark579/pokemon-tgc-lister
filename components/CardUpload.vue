@@ -73,6 +73,7 @@ export default defineComponent({
       if (data.value) {
         this.match = data.value;
       }
+      this.matchLoading = false;
     }
   }
 })
@@ -97,7 +98,7 @@ export default defineComponent({
       <v-row>
         <template v-for="preview in previews">
           <v-col cols="4">
-            <v-card elevation="2" max-height="250" title="">
+            <v-card variant="outlined" elevation="2" max-height="250" title="">
               <div class="pa-6">
                 <v-img :height="150" :src="preview"></v-img>
               </div>
@@ -107,12 +108,15 @@ export default defineComponent({
       </v-row>
       <v-row>
         <v-col cols="12">
-          <template v-if="match">
-            <v-card class="mx-auto" elevation="16" :title="cardTitle()">
+          <template v-if="match && !matchLoading">
+            <v-card class="mx-auto" elevation="2" :title="cardTitle()">
               <div class="pa-6">
                 <v-img :height="200" :src="match.images.small"></v-img>
               </div>
             </v-card>
+          </template>
+          <template v-if="matchLoading">
+            <v-skeleton-loader type="heading, image"></v-skeleton-loader>
           </template>
         </v-col>
       </v-row>
