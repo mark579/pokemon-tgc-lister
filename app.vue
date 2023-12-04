@@ -20,7 +20,7 @@
         </v-container>
       </v-main>
       <v-footer color="secondary">
-        {{ new Date().getFullYear() }} — <strong>Mark Davenport</strong>
+        {{ new Date().getFullYear() }} — <strong>MadSunshineCreations</strong>
       </v-footer>
     </v-app>
   </NuxtLayout>
